@@ -308,11 +308,12 @@ public class AdministradorDaoJDBC implements IAdministradorDao {
             con.close();
             System.out.println(MensagemUtilAdm.getValor(MensagemUtilAdm.MSG_SUCESSO_PROCURARADM));
             return admin;
-        } catch (SQLException e) {
+        } catch (Exception e) {
+            e.printStackTrace();
             throw new RuntimeException(e);
         }
     }
-    
+
     public Administrador getPorId(Long id) {
         try {
 

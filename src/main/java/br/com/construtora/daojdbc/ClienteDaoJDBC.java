@@ -76,7 +76,7 @@ public class ClienteDaoJDBC implements IClienteDao {
             throw new RuntimeException(e);
         }
     }
-    
+
     public Cliente getPorSenha(String senha) {
         try {
 

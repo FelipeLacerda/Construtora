@@ -40,17 +40,17 @@ public class ContratoDaoJDBC implements IContratoDao {
 
             con = ConnectionFactory.getConnection();
 
-            String insertContrato = "INSERT INTO CONTRATO (CERTIFICACAO_CLI,CERTIFICACAO_ADM,CERTIFICACAO_IMO,CONTRATO_CLI,CONTRATO_ADM,CONTRATO_IMO,) VALUES (?,?,?,?,?,?)";
+            String insertContrato = "INSERT INTO CONTRATO (CERTIFICACAO_CLI,CERTIFICACAO_ADM,CERTIFICACAO_IMO,CONTRATO_CLI,CONTRATO_ADM,CONTRATO_IMO) VALUES (?,?,?,?,?,?);";
 
             PreparedStatement st = con.prepareStatement(insertContrato,
                     PreparedStatement.RETURN_GENERATED_KEYS);
 
-            st.setString(1, contrato.isCertificacaoCli());
-            st.setString(2, contrato.isCertificacaoAdm());
-            st.setString(3, contrato.isCertificacaoImo());
-            st.setString(4, contrato.getCliente().getUsuarioCli().getSenha());
-            st.setString(5, contrato.getAdmin().getUsuarioAdm().getSenha());
-            st.setString(6, contrato.getImovel().getIdImovel());
+            st.setString(1, c.getCertificacaoCli());
+            st.setString(2, c.getCertificacaoAdm());
+            st.setString(3, c.getCertificacaoImo());
+            st.setLong(4, c.getCliente().getIdCli());
+            st.setLong(5, c.getAdmin().getIdAdm());
+            st.setString(6, c.getImovel().getIdImovel());
 
             st.executeUpdate();
             st.close();
@@ -78,9 +78,9 @@ public class ContratoDaoJDBC implements IContratoDao {
             String updateContrato = "UPDATE CONTRATO SET CERTIFICACAO_CLI=?,CERTIFICACAO_ADM=?,CERTIFICACAO_IMO=? WHERE CONTRATO_ID=?;";
 
             PreparedStatement st = con.prepareStatement(updateContrato, PreparedStatement.RETURN_GENERATED_KEYS);
-            st.setString(1, c.isCertificacaoCli());
-            st.setString(2, c.isCertificacaoAdm());
-            st.setString(3, c.isCertificacaoImo());
+            st.setString(1, c.getCertificacaoCli());
+            st.setString(2, c.getCertificacaoAdm());
+            st.setString(3, c.getCertificacaoImo());
             st.setLong(4, c.getIdContrato());
             st.executeUpdate();
 
@@ -145,12 +145,12 @@ public class ContratoDaoJDBC implements IContratoDao {
                 cli.setNomeCli(rs.getString("cliente_nome"));
                 cli.setCpfCli(rs.getString("cliente_cpf"));
                 cont.setCliente(cli);
-                
+
                 admin.setIdAdm(rs.getLong("adm_id"));
                 admin.setNomeAdm(rs.getString("adm_nome"));
                 admin.setCpfAdm(rs.getString("adm_cpf"));
                 cont.setAdmin(admin);
-                
+
                 imov.setIdImovel(rs.getString("imovel_id"));
                 imov.setTamanho(rs.getDouble("imovel_tamanho"));
                 imov.setPreco(rs.getDouble("imovel_preco"));

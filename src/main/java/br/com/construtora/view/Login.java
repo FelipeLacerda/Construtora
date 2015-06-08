@@ -10,6 +10,7 @@ import br.com.construtora.controller.ClienteController;
 import br.com.construtora.model.Administrador;
 import br.com.construtora.model.Cliente;
 import br.com.construtora.util.MensagemUtilUsuario;
+import br.com.construtora.viewAdm.MenuAdm;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -31,6 +32,7 @@ public class Login extends javax.swing.JDialog {
     public Login(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -55,7 +57,7 @@ public class Login extends javax.swing.JDialog {
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("SD Construtora - Login Usuário");
+        setTitle("SD Construtora - Login");
         setIconImage(null);
         setIconImages(null);
         setMaximumSize(new java.awt.Dimension(450, 420));
@@ -74,7 +76,7 @@ public class Login extends javax.swing.JDialog {
         getContentPane().add(cbselecione);
         cbselecione.setBounds(160, 280, 170, 30);
 
-        jToggleButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Felipe Lacerda\\Downloads\\SD Azul\\adc2.png")); // NOI18N
+        jToggleButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/adc2.png"))); // NOI18N
         getContentPane().add(jToggleButton1);
         jToggleButton1.setBounds(160, 70, 110, 110);
 
@@ -92,14 +94,15 @@ public class Login extends javax.swing.JDialog {
         getContentPane().add(jlsenha);
         jlsenha.setBounds(100, 240, 80, 17);
 
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Felipe Lacerda\\Downloads\\SD Azul\\cadi.png")); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cadi.png"))); // NOI18N
         getContentPane().add(jLabel5);
         jLabel5.setBounds(300, 230, 30, 40);
         getContentPane().add(pfsenha);
         pfsenha.setBounds(160, 240, 170, 30);
 
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Felipe Lacerda\\Downloads\\SD Azul\\seta.png")); // NOI18N
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/seta.png"))); // NOI18N
         jButton1.setText("Entrar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -107,10 +110,11 @@ public class Login extends javax.swing.JDialog {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(80, 370, 140, 30);
+        jButton1.setBounds(80, 360, 140, 40);
 
         jButton2.setBackground(new java.awt.Color(255, 255, 255));
-        jButton2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Felipe Lacerda\\Downloads\\SD Azul\\fecbola.gif")); // NOI18N
+        jButton2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/fecbola.gif"))); // NOI18N
         jButton2.setText(" Sair");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -118,7 +122,7 @@ public class Login extends javax.swing.JDialog {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(230, 370, 140, 30);
+        jButton2.setBounds(230, 360, 140, 40);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -126,7 +130,7 @@ public class Login extends javax.swing.JDialog {
         getContentPane().add(jLabel4);
         jLabel4.setBounds(170, 10, 130, 17);
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Felipe Lacerda\\Downloads\\SD Azul\\login.jpg")); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/login.jpg"))); // NOI18N
         getContentPane().add(jLabel3);
         jLabel3.setBounds(0, 0, 450, 420);
 
@@ -138,7 +142,7 @@ public class Login extends javax.swing.JDialog {
     }//GEN-LAST:event_cbselecioneActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        int resp = JOptionPane.showConfirmDialog(null,MensagemUtilUsuario.getValor(MensagemUtilUsuario.MSG_SAIR),MensagemUtilUsuario.getValor(MensagemUtilUsuario.CABE_SAIR), JOptionPane.YES_NO_OPTION);
+        int resp = JOptionPane.showConfirmDialog(null, MensagemUtilUsuario.getValor(MensagemUtilUsuario.MSG_SAIR), MensagemUtilUsuario.getValor(MensagemUtilUsuario.CABE_SAIR), JOptionPane.YES_NO_OPTION);
         if (resp == 0) {
             dispose();
         }
@@ -154,16 +158,16 @@ public class Login extends javax.swing.JDialog {
 
         if (tflogin.getText().equals("")) {
             jllogin.setForeground(new java.awt.Color(255, 0, 0));
-            JOptionPane.showMessageDialog(null,MensagemUtilUsuario.getValor(MensagemUtilUsuario.MSG_OBG),MensagemUtilUsuario.getValor(MensagemUtilUsuario.CABE_OBG), JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, MensagemUtilUsuario.getValor(MensagemUtilUsuario.MSG_OBG), MensagemUtilUsuario.getValor(MensagemUtilUsuario.CABE_OBG), JOptionPane.ERROR_MESSAGE);
         } else if (pfsenha.getText().equals("")) {
             jlsenha.setForeground(new java.awt.Color(255, 0, 0));
-            JOptionPane.showMessageDialog(null,MensagemUtilUsuario.getValor(MensagemUtilUsuario.MSG_OBG),MensagemUtilUsuario.getValor(MensagemUtilUsuario.CABE_OBG), JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, MensagemUtilUsuario.getValor(MensagemUtilUsuario.MSG_OBG), MensagemUtilUsuario.getValor(MensagemUtilUsuario.CABE_OBG), JOptionPane.ERROR_MESSAGE);
         } else {
             if (resp.equals("Cliente")) {
                 try {
                     clienteRetorno = clienteControl.procurarCliente(senha);
                     if (clienteRetorno == null) {
-                        JOptionPane.showMessageDialog(null,MensagemUtilUsuario.getValor(MensagemUtilUsuario.MSG_CAMPO_CERTO),MensagemUtilUsuario.getValor(MensagemUtilUsuario.CABE_ERRO), JOptionPane.ERROR_MESSAGE);
+                        JOptionPane.showMessageDialog(null, MensagemUtilUsuario.getValor(MensagemUtilUsuario.MSG_CAMPO_CERTO), MensagemUtilUsuario.getValor(MensagemUtilUsuario.CABE_ERRO), JOptionPane.ERROR_MESSAGE);
                     }
                 } catch (Exception ex) {
                     Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
@@ -182,7 +186,7 @@ public class Login extends javax.swing.JDialog {
                 try {
                     admRetorno = admControl.procurarAdm(senha);
                     if (admRetorno == null) {
-                        JOptionPane.showMessageDialog(null,MensagemUtilUsuario.getValor(MensagemUtilUsuario.MSG_CAMPO_CERTO),MensagemUtilUsuario.getValor(MensagemUtilUsuario.CABE_ERRO), JOptionPane.ERROR_MESSAGE);
+                        JOptionPane.showMessageDialog(null, MensagemUtilUsuario.getValor(MensagemUtilUsuario.MSG_CAMPO_CERTO), MensagemUtilUsuario.getValor(MensagemUtilUsuario.CABE_ERRO), JOptionPane.ERROR_MESSAGE);
                     }
                 } catch (Exception ex) {
                     Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
@@ -199,7 +203,7 @@ public class Login extends javax.swing.JDialog {
                     menuAdm.setAlwaysOnTop(false);
                 }
             } else if (resp.equals("SELECIONE")) {
-                JOptionPane.showMessageDialog(null,MensagemUtilUsuario.getValor(MensagemUtilUsuario.MSG_ESCOLHA),MensagemUtilUsuario.getValor(MensagemUtilUsuario.CABE_OBG), JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, MensagemUtilUsuario.getValor(MensagemUtilUsuario.MSG_ESCOLHA), MensagemUtilUsuario.getValor(MensagemUtilUsuario.CABE_OBG), JOptionPane.ERROR_MESSAGE);
             }
         }
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -229,6 +233,7 @@ public class Login extends javax.swing.JDialog {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the dialog */

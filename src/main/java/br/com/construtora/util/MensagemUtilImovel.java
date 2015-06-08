@@ -13,7 +13,7 @@ import java.util.ResourceBundle;
  */
 public class MensagemUtilImovel {
 
-    private static final String FILE_NAME = "br/com/construtora/arquivopropriedade/mensagemImovel";
+    private static final String FILE_NAME = "mensagemImovel";
 
     public static final String MSG_SUCESSO_SALVARIMO = "msg_salvarImovel";
     public static final String MSG_ERRO_SALVARIMO = "msg_salvarImovel_erro";

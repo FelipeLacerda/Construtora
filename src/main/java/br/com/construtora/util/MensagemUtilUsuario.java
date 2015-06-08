@@ -13,10 +13,10 @@ import java.util.ResourceBundle;
  */
 public class MensagemUtilUsuario {
 
-    private static final String FILE_NAME = "br/com/construtora/arquivopropriedade/mensagemUsuario";
+    private static final String FILE_NAME = "mensagemUsuario";
 
-    public static final String MSG_SUCESSO_SALVARCLI = "msg_salvarCli";
-    public static final String MSG_ERRO_SALVARCLI = "msg_salvarCli_erro";
+    public static final String MSG_SUCESSO_SALVARUSU = "msg_salvarUsu";
+    public static final String MSG_ERRO_SALVARUSU = "msg_salvarUsu_erro";
 
     public static final String CABE_SAIR = "cabecalho_sair";
     public static final String CABE_ERRO = "cabecalho_erro";
@@ -30,7 +30,7 @@ public class MensagemUtilUsuario {
 
     public static final String MSG_LOGIN = "msg_login";
     public static final String MSG_SAIR = "msg_sair";
-    public static final String MSG_CANCEL = "msg_cancel";
+    public static final String MSG_CANCEL = "msg_cancelar";
     public static final String MSG_CAD = "msg_cadastrar";
     public static final String MSG_REM = "msg_remover";
     public static final String MSG_OBG = "msg_obrigatorio";

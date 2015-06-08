@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ContratoRelatorio" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="dd808e06-6ba7-40e1-aa80-5cf6a7c6051e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="3"/>
+	<field name="certificacaoCli" class="java.lang.String"/>
+	<field name="certificacaoAdm" class="java.lang.String"/>
+	<field name="certificacaoImo" class="java.lang.String"/>
+	<field name="idContrato" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="90" y="12" width="403" height="54" uuid="d9de7495-0435-441a-a4c5-f2df0b5c8dea"/>
+				<textElement>
+					<font size="36" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relatório de Contratos]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<staticText>
+				<reportElement x="75" y="0" width="159" height="20" uuid="5a0b81d7-e5e2-40fa-a8ea-60fd2158e689"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Certificação do Cliente:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="234" y="0" width="161" height="20" uuid="84d5ea42-43d1-4105-b326-0b56bcc7bf34"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Certificação do Administrador:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="395" y="0" width="160" height="20" uuid="649bbf94-b7ff-4ee7-a746-4d420259ca40"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Certificação do Imóvel:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="75" height="20" uuid="ad97db94-709c-40f0-9f78-0b2a6dc2503f"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID:]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="26" splitType="Stretch">
+			<textField>
+				<reportElement x="75" y="0" width="159" height="20" uuid="fa6d3dcb-75dd-4207-866d-a25ec4babbf3"/>
+				<textFieldExpression><![CDATA[$F{certificacaoCli}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="234" y="0" width="161" height="20" uuid="af984d9d-4045-4502-9513-422fe31a577e"/>
+				<textFieldExpression><![CDATA[$F{certificacaoAdm}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="395" y="0" width="160" height="20" uuid="6d72c11b-7e0f-4b0e-9562-64843e559215"/>
+				<textFieldExpression><![CDATA[$F{certificacaoImo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="4" width="75" height="20" uuid="2bc2e9c4-009f-4e79-bf3a-c6b61efbb370"/>
+				<textFieldExpression><![CDATA[$F{idContrato}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

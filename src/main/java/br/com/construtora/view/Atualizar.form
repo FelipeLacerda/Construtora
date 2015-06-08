@@ -72,7 +72,7 @@
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\Felipe Lacerda\Downloads\SD Azul\pro.png"/>
+          <Image iconType="3" name="/imagens/pro.png"/>
         </Property>
       </Properties>
       <Events>
@@ -160,11 +160,14 @@
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="11" style="1"/>
+        </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="ff" red="0" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\Felipe Lacerda\Downloads\SD Azul\up.png"/>
+          <Image iconType="3" name="/imagens/V.gif"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Atualizar"/>
       </Properties>
@@ -173,7 +176,7 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="560" y="530" width="110" height="40"/>
+          <AbsoluteConstraints x="540" y="530" width="120" height="40"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -182,11 +185,14 @@
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="11" style="1"/>
+        </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="0" green="0" red="ff" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\Felipe Lacerda\Downloads\SD Azul\fe.png"/>
+          <Image iconType="3" name="/imagens/X.gif"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Cancelar"/>
       </Properties>
@@ -195,7 +201,7 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="670" y="530" width="110" height="40"/>
+          <AbsoluteConstraints x="660" y="530" width="120" height="40"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -205,7 +211,7 @@
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\Felipe Lacerda\Downloads\SD Azul\lix.png"/>
+          <Image iconType="3" name="/imagens/seta.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Limpar Campos"/>
         <Property name="actionCommand" type="java.lang.String" value="  Limpar Campos"/>
@@ -618,7 +624,7 @@
     <Component class="javax.swing.JLabel" name="jLabel23">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\Felipe Lacerda\Downloads\SD Azul\cad.jpg"/>
+          <Image iconType="3" name="/imagens/cad.jpg"/>
         </Property>
       </Properties>
       <Constraints>

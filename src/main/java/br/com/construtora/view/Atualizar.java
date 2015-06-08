@@ -38,6 +38,7 @@ public class Atualizar extends javax.swing.JDialog {
     public Atualizar(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -98,10 +99,8 @@ public class Atualizar extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("SD Construtora - Atualizar");
-        setMaximumSize(new java.awt.Dimension(810, 635));
         setMinimumSize(new java.awt.Dimension(810, 635));
         setModal(true);
-        setPreferredSize(new java.awt.Dimension(810, 635));
         getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -118,7 +117,7 @@ public class Atualizar extends javax.swing.JDialog {
         jLabel2.setBounds(40, 80, 220, 14);
 
         jbprocurar.setBackground(new java.awt.Color(255, 255, 255));
-        jbprocurar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Felipe Lacerda\\Downloads\\SD Azul\\pro.png")); // NOI18N
+        jbprocurar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/pro.png"))); // NOI18N
         jbprocurar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbprocurarActionPerformed(evt);
@@ -156,8 +155,9 @@ public class Atualizar extends javax.swing.JDialog {
         jLabel5.setBounds(40, 250, 110, 15);
 
         jbatualizardados.setBackground(new java.awt.Color(255, 255, 255));
+        jbatualizardados.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jbatualizardados.setForeground(new java.awt.Color(0, 255, 0));
-        jbatualizardados.setIcon(new javax.swing.ImageIcon("C:\\Users\\Felipe Lacerda\\Downloads\\SD Azul\\up.png")); // NOI18N
+        jbatualizardados.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/V.gif"))); // NOI18N
         jbatualizardados.setText("Atualizar");
         jbatualizardados.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -165,11 +165,12 @@ public class Atualizar extends javax.swing.JDialog {
             }
         });
         getContentPane().add(jbatualizardados);
-        jbatualizardados.setBounds(560, 530, 110, 40);
+        jbatualizardados.setBounds(540, 530, 120, 40);
 
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 0, 0));
-        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Felipe Lacerda\\Downloads\\SD Azul\\fe.png")); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/X.gif"))); // NOI18N
         jButton1.setText("Cancelar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -177,10 +178,10 @@ public class Atualizar extends javax.swing.JDialog {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(670, 530, 110, 40);
+        jButton1.setBounds(660, 530, 120, 40);
 
         jblimpar.setBackground(new java.awt.Color(255, 255, 255));
-        jblimpar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Felipe Lacerda\\Downloads\\SD Azul\\lix.png")); // NOI18N
+        jblimpar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/seta.png"))); // NOI18N
         jblimpar.setText("Limpar Campos");
         jblimpar.setActionCommand("  Limpar Campos");
         jblimpar.addActionListener(new java.awt.event.ActionListener() {
@@ -348,7 +349,7 @@ public class Atualizar extends javax.swing.JDialog {
         getContentPane().add(jlid);
         jlid.setBounds(100, 100, 80, 30);
 
-        jLabel23.setIcon(new javax.swing.ImageIcon("C:\\Users\\Felipe Lacerda\\Downloads\\SD Azul\\cad.jpg")); // NOI18N
+        jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/cad.jpg"))); // NOI18N
         getContentPane().add(jLabel23);
         jLabel23.setBounds(0, 0, 800, 600);
 
@@ -364,7 +365,7 @@ public class Atualizar extends javax.swing.JDialog {
                 cliente = clienteControl.procurarCliente(senha);
             } catch (Exception ex) {
                 Logger.getLogger(Atualizar.class.getName()).log(Level.SEVERE, null, ex);
-                JOptionPane.showMessageDialog(null,MensagemUtilCliente.getValor(MensagemUtilCliente.MSG_ERRO_PROCURARCLI), "ERRO ao procurar o Cliente!", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, MensagemUtilCliente.getValor(MensagemUtilCliente.MSG_ERRO_PROCURARCLI), "ERRO ao procurar o Cliente!", JOptionPane.ERROR_MESSAGE);
             }
             if (cliente.getUsuarioCli().getSenha().equals(senha)) {
                 String idCli = String.valueOf(cliente.getIdCli());
@@ -435,7 +436,7 @@ public class Atualizar extends javax.swing.JDialog {
                 tfcelular.setText(adm.getContatoAdm().getCelular());
                 tfemail.setText(adm.getContatoAdm().getEmail());
             } else {
-                JOptionPane.showMessageDialog(null,MensagemUtilAdm.getValor(MensagemUtilAdm.MSG_ERRO_PROCURARADM),MensagemUtilUsuario.getValor(MensagemUtilUsuario.CABE_ERRO), JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, MensagemUtilAdm.getValor(MensagemUtilAdm.MSG_ERRO_PROCURARADM), MensagemUtilUsuario.getValor(MensagemUtilUsuario.CABE_ERRO), JOptionPane.ERROR_MESSAGE);
             }
         } /*else if (resp.equals("Imóvel")) {
          this.dispose();
@@ -453,7 +454,7 @@ public class Atualizar extends javax.swing.JDialog {
         String resp = (String) cbselecione.getSelectedItem();
 
         if (resp.equals("Cliente")) {
-            
+
             Long idCli = Long.valueOf(jlid.getText());
             cliente.setIdCli(idCli);
 
@@ -491,14 +492,14 @@ public class Atualizar extends javax.swing.JDialog {
 
             try {
                 clienteControl.atualizarCliente(cliente);
-                JOptionPane.showMessageDialog(null,MensagemUtilCliente.getValor(MensagemUtilCliente.MSG_SUCESSO_EDITARCLI));
+                JOptionPane.showMessageDialog(null, MensagemUtilCliente.getValor(MensagemUtilCliente.MSG_SUCESSO_EDITARCLI));
                 dispose();
             } catch (Exception ex) {
                 Logger.getLogger(Atualizar.class.getName()).log(Level.SEVERE, null, ex);
             }
         } else if (resp.equals("Administrador")) {
-            
-             Long idAdm = Long.valueOf(jlid.getText());
+
+            Long idAdm = Long.valueOf(jlid.getText());
             admin.setIdAdm(idAdm);
 
             usu.setLogin(tflogin.getText());
@@ -509,9 +510,8 @@ public class Atualizar extends javax.swing.JDialog {
             admin.setCpfAdm(tfcpf.getText());
 
             /*DateUtil datautil = new DateUtil();
-            Date data = datautil.stringToDate(tfdata.getText());
-            admin.setDataNascimento(data);*/
-
+             Date data = datautil.stringToDate(tfdata.getText());
+             admin.setDataNascimento(data);*/
             Long idEnde = Long.valueOf(jlidende.getText());
             ende.setId(idEnde);
             ende.setCep(tfcep.getText());
@@ -535,7 +535,7 @@ public class Atualizar extends javax.swing.JDialog {
 
             try {
                 admControl.atualizarAdm(admin);
-                JOptionPane.showMessageDialog(null,MensagemUtilAdm.getValor(MensagemUtilAdm.MSG_SUCESSO_EDITARADM));
+                JOptionPane.showMessageDialog(null, MensagemUtilAdm.getValor(MensagemUtilAdm.MSG_SUCESSO_EDITARADM));
                 dispose();
             } catch (Exception ex) {
                 Logger.getLogger(Atualizar.class.getName()).log(Level.SEVERE, null, ex);
@@ -552,7 +552,7 @@ public class Atualizar extends javax.swing.JDialog {
             this.dispose();
             AtualizarImovel atualizarImo = new AtualizarImovel(null, true);
             atualizarImo.setVisible(true);
-        }else if(resp.equals("Administrador")) {
+        } else if (resp.equals("Administrador")) {
             tfdata.setEditable(false);
         }
     }//GEN-LAST:event_cbselecioneActionPerformed
@@ -586,7 +586,7 @@ public class Atualizar extends javax.swing.JDialog {
     }//GEN-LAST:event_jblimparActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        int resp = JOptionPane.showConfirmDialog(null, MensagemUtilUsuario.getValor(MensagemUtilUsuario.MSG_CANCEL),MensagemUtilUsuario.getValor(MensagemUtilUsuario.CABE_CANCEL), JOptionPane.YES_NO_OPTION);
+        int resp = JOptionPane.showConfirmDialog(null, MensagemUtilUsuario.getValor(MensagemUtilUsuario.MSG_CANCEL), MensagemUtilUsuario.getValor(MensagemUtilUsuario.CABE_CANCEL), JOptionPane.YES_NO_OPTION);
         if (resp == 0) {
             dispose();
         }
@@ -617,6 +617,8 @@ public class Atualizar extends javax.swing.JDialog {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Atualizar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 

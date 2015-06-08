@@ -84,7 +84,6 @@ public class Listar extends javax.swing.JDialog {
         jLabel1.setBounds(380, 10, 100, 17);
 
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Felipe Lacerda\\Downloads\\SD Azul\\seta.png")); // NOI18N
         jButton1.setText("  Listar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -126,7 +125,6 @@ public class Listar extends javax.swing.JDialog {
         jLabel4.setBounds(250, 90, 100, 15);
 
         jblimpar.setBackground(new java.awt.Color(255, 255, 255));
-        jblimpar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Felipe Lacerda\\Downloads\\SD Azul\\lix2.png")); // NOI18N
         jblimpar.setText(" Limpar Tabela");
         jblimpar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -137,7 +135,6 @@ public class Listar extends javax.swing.JDialog {
         jblimpar.setBounds(260, 50, 130, 30);
 
         jButton2.setBackground(new java.awt.Color(255, 255, 255));
-        jButton2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Felipe Lacerda\\Downloads\\SD Azul\\fe.png")); // NOI18N
         jButton2.setText("Sair");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -146,8 +143,6 @@ public class Listar extends javax.swing.JDialog {
         });
         getContentPane().add(jButton2);
         jButton2.setBounds(340, 313, 120, 30);
-
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Felipe Lacerda\\Downloads\\SD Azul\\rem.jpg")); // NOI18N
         getContentPane().add(jLabel5);
         jLabel5.setBounds(0, 0, 800, 380);
 
@@ -165,11 +160,11 @@ public class Listar extends javax.swing.JDialog {
                 clientes = clienteControl.listarClientes();
             } catch (Exception ex) {
                 Logger.getLogger(Listar.class.getName()).log(Level.SEVERE, null, ex);
-                JOptionPane.showMessageDialog(null, MensagemUtilCliente.getValor(MensagemUtilCliente.MSG_ERRO_LISTARCLI),MensagemUtilUsuario.getValor(MensagemUtilUsuario.CABE_ERRO), JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, MensagemUtilCliente.getValor(MensagemUtilCliente.MSG_ERRO_LISTARCLI), MensagemUtilUsuario.getValor(MensagemUtilUsuario.CABE_ERRO), JOptionPane.ERROR_MESSAGE);
 
             }
             if (clientes == null) {
-                JOptionPane.showMessageDialog(null, MensagemUtilCliente.getValor(MensagemUtilCliente.MSG_ERRO_LISTARCLI),MensagemUtilUsuario.getValor(MensagemUtilUsuario.CABE_OBG), JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, MensagemUtilCliente.getValor(MensagemUtilCliente.MSG_ERRO_LISTARCLI), MensagemUtilUsuario.getValor(MensagemUtilUsuario.CABE_OBG), JOptionPane.ERROR_MESSAGE);
             } else {
 
                 while (modeloTableDados.getRowCount() > 0) {
@@ -191,11 +186,11 @@ public class Listar extends javax.swing.JDialog {
                 adms = admControl.listarAdm();
             } catch (Exception ex) {
                 Logger.getLogger(Listar.class.getName()).log(Level.SEVERE, null, ex);
-                JOptionPane.showMessageDialog(null, MensagemUtilAdm.getValor(MensagemUtilAdm.MSG_ERRO_LISTARADM),MensagemUtilUsuario.getValor(MensagemUtilUsuario.CABE_ERRO), JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, MensagemUtilAdm.getValor(MensagemUtilAdm.MSG_ERRO_LISTARADM), MensagemUtilUsuario.getValor(MensagemUtilUsuario.CABE_ERRO), JOptionPane.ERROR_MESSAGE);
 
             }
             if (adms == null) {
-                JOptionPane.showMessageDialog(null,MensagemUtilAdm.getValor(MensagemUtilAdm.MSG_ERRO_LISTARADM),MensagemUtilUsuario.getValor(MensagemUtilUsuario.CABE_OBG), JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, MensagemUtilAdm.getValor(MensagemUtilAdm.MSG_ERRO_LISTARADM), MensagemUtilUsuario.getValor(MensagemUtilUsuario.CABE_OBG), JOptionPane.ERROR_MESSAGE);
             } else {
 
                 while (modeloTableDados.getRowCount() > 0) {
@@ -264,6 +259,7 @@ public class Listar extends javax.swing.JDialog {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Listar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the dialog */

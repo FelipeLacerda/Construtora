@@ -6,12 +6,12 @@ public class Contrato {
     private Cliente cliente = new Cliente();
     private Imovel imovel = new Imovel();
     private Administrador admin = new Administrador();
-    
+
     private String certificacaoCli;
     private String certificacaoImo;
     private String certificacaoAdm;
 
-    public String isCertificacaoCli() {
+    public String getCertificacaoCli() {
         return certificacaoCli;
     }
 
@@ -19,7 +19,7 @@ public class Contrato {
         this.certificacaoCli = certificacaoCli;
     }
 
-    public String isCertificacaoImo() {
+    public String getCertificacaoImo() {
         return certificacaoImo;
     }
 
@@ -27,7 +27,7 @@ public class Contrato {
         this.certificacaoImo = certificacaoImo;
     }
 
-    public String isCertificacaoAdm() {
+    public String getCertificacaoAdm() {
         return certificacaoAdm;
     }
 
@@ -66,7 +66,5 @@ public class Contrato {
     public void setAdmin(Administrador admin) {
         this.admin = admin;
     }
-    
-    
 
 }

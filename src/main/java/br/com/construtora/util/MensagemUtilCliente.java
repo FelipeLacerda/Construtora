@@ -13,7 +13,7 @@ import java.util.ResourceBundle;
  */
 public class MensagemUtilCliente {
 
-    private static final String FILE_NAME = "br/com/construtora/arquivopropriedade/mensagemCliente";
+    private static final String FILE_NAME = "mensagemCliente";
 
     public static final String MSG_SUCESSO_SALVARCLI = "msg_salvarCli";
     public static final String MSG_ERRO_SALVARCLI = "msg_salvarCli_erro";

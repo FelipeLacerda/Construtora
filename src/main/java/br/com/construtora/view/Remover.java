@@ -40,6 +40,7 @@ public class Remover extends javax.swing.JDialog {
     public Remover(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -95,7 +96,6 @@ public class Remover extends javax.swing.JDialog {
         cbselecione.setBounds(330, 120, 120, 30);
 
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Felipe Lacerda\\Downloads\\SD Azul\\pro.png")); // NOI18N
         jButton1.setText("  Procurar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,13 +104,10 @@ public class Remover extends javax.swing.JDialog {
         });
         getContentPane().add(jButton1);
         jButton1.setBounds(450, 120, 130, 30);
-
-        jToggleButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Felipe Lacerda\\Downloads\\SD Azul\\remov.jpg")); // NOI18N
         getContentPane().add(jToggleButton1);
         jToggleButton1.setBounds(660, 50, 110, 110);
 
         jButton5.setBackground(new java.awt.Color(255, 255, 255));
-        jButton5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Felipe Lacerda\\Downloads\\SD Azul\\lix2.png")); // NOI18N
         jButton5.setText("  Remover");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -121,7 +118,6 @@ public class Remover extends javax.swing.JDialog {
         jButton5.setBounds(530, 300, 120, 30);
 
         jButton6.setBackground(new java.awt.Color(255, 255, 255));
-        jButton6.setIcon(new javax.swing.ImageIcon("C:\\Users\\Felipe Lacerda\\Downloads\\SD Azul\\fec.png")); // NOI18N
         jButton6.setText("Cancelar");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -143,8 +139,6 @@ public class Remover extends javax.swing.JDialog {
 
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(60, 170, 710, 130);
-
-        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Felipe Lacerda\\Downloads\\SD Azul\\rem.jpg")); // NOI18N
         getContentPane().add(jLabel3);
         jLabel3.setBounds(0, 0, 800, 380);
 
@@ -160,7 +154,7 @@ public class Remover extends javax.swing.JDialog {
                 cliente = clienteControl.procurarCliente(senha);
             } catch (Exception ex) {
                 Logger.getLogger(Remover.class.getName()).log(Level.SEVERE, null, ex);
-                JOptionPane.showMessageDialog(null,MensagemUtilCliente.getValor(MensagemUtilCliente.MSG_ERRO_PROCURARCLI),MensagemUtilUsuario.getValor(MensagemUtilUsuario.CABE_ERRO), JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, MensagemUtilCliente.getValor(MensagemUtilCliente.MSG_ERRO_PROCURARCLI), MensagemUtilUsuario.getValor(MensagemUtilUsuario.CABE_ERRO), JOptionPane.ERROR_MESSAGE);
             }
             if (cliente.getUsuarioCli().getSenha().equals(senha)) {
                 String[] colunas = {"Login: ", "Nome: ", "CPF: ", "Cidade: ", "Celular: "};
@@ -170,7 +164,7 @@ public class Remover extends javax.swing.JDialog {
                 tbdados.setModel(new DefaultTableModel(dados, colunas));
 
             } else {
-                JOptionPane.showMessageDialog(null,MensagemUtilCliente.getValor(MensagemUtilCliente.MSG_ERRO_PROCURARCLI),MensagemUtilUsuario.getValor(MensagemUtilUsuario.CABE_ERRO), JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, MensagemUtilCliente.getValor(MensagemUtilCliente.MSG_ERRO_PROCURARCLI), MensagemUtilUsuario.getValor(MensagemUtilUsuario.CABE_ERRO), JOptionPane.ERROR_MESSAGE);
             }
 
         } else if (resp.equals("Administrador")) {
@@ -178,7 +172,7 @@ public class Remover extends javax.swing.JDialog {
                 adm = admControl.procurarAdm(senha);
             } catch (Exception ex) {
                 Logger.getLogger(Remover.class.getName()).log(Level.SEVERE, null, ex);
-                JOptionPane.showMessageDialog(null,MensagemUtilAdm.getValor(MensagemUtilAdm.MSG_ERRO_PROCURARADM),MensagemUtilUsuario.getValor(MensagemUtilUsuario.CABE_ERRO), JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, MensagemUtilAdm.getValor(MensagemUtilAdm.MSG_ERRO_PROCURARADM), MensagemUtilUsuario.getValor(MensagemUtilUsuario.CABE_ERRO), JOptionPane.ERROR_MESSAGE);
             }
             if (adm.getUsuarioAdm().getSenha().equals(senha)) {
                 String[] colunas = {"Login: ", "Nome: ", "CPF: ", "Cidade: ", "Celular: "};
@@ -188,7 +182,7 @@ public class Remover extends javax.swing.JDialog {
                 tbdados.setModel(new DefaultTableModel(dados, colunas));
 
             } else {
-                JOptionPane.showMessageDialog(null,MensagemUtilAdm.getValor(MensagemUtilAdm.MSG_ERRO_PROCURARADM),MensagemUtilUsuario.getValor(MensagemUtilUsuario.CABE_ERRO), JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, MensagemUtilAdm.getValor(MensagemUtilAdm.MSG_ERRO_PROCURARADM), MensagemUtilUsuario.getValor(MensagemUtilUsuario.CABE_ERRO), JOptionPane.ERROR_MESSAGE);
             }
 
         } else if (resp.equals("Imóvel")) {
@@ -196,7 +190,7 @@ public class Remover extends javax.swing.JDialog {
                 imovel = imovelControl.procurarImovelSenha(senha);
             } catch (Exception ex) {
                 Logger.getLogger(Remover.class.getName()).log(Level.SEVERE, null, ex);
-                JOptionPane.showMessageDialog(null,MensagemUtilImovel.getValor(MensagemUtilImovel.MSG_ERRO_PROCURARIMO),MensagemUtilUsuario.getValor(MensagemUtilUsuario.CABE_ERRO), JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, MensagemUtilImovel.getValor(MensagemUtilImovel.MSG_ERRO_PROCURARIMO), MensagemUtilUsuario.getValor(MensagemUtilUsuario.CABE_ERRO), JOptionPane.ERROR_MESSAGE);
             }
             if (imovel.getIdImovel().equals(senha)) {
                 String[] colunas = {"Preço do Imóvel: ", "Tamanho do Imóvel: ", "Especificação: ", "Andamento: ", "Cidade: "};
@@ -205,7 +199,7 @@ public class Remover extends javax.swing.JDialog {
                 };
                 tbdados.setModel(new DefaultTableModel(dados, colunas));
             } else {
-                JOptionPane.showMessageDialog(null, MensagemUtilImovel.getValor(MensagemUtilImovel.MSG_ERRO_PROCURARIMO),MensagemUtilUsuario.getValor(MensagemUtilUsuario.CABE_ERRO), JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, MensagemUtilImovel.getValor(MensagemUtilImovel.MSG_ERRO_PROCURARIMO), MensagemUtilUsuario.getValor(MensagemUtilUsuario.CABE_ERRO), JOptionPane.ERROR_MESSAGE);
             }
         }
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -213,12 +207,12 @@ public class Remover extends javax.swing.JDialog {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         pfsenha.setText("");
         cbselecione.setSelectedItem("SELECIONE");
-        int resposta = JOptionPane.showConfirmDialog(null,MensagemUtilUsuario.getValor(MensagemUtilUsuario.MSG_REM),MensagemUtilUsuario.getValor(MensagemUtilUsuario.CABE_REM), JOptionPane.YES_NO_OPTION);
+        int resposta = JOptionPane.showConfirmDialog(null, MensagemUtilUsuario.getValor(MensagemUtilUsuario.MSG_REM), MensagemUtilUsuario.getValor(MensagemUtilUsuario.CABE_REM), JOptionPane.YES_NO_OPTION);
         if (resp.equals("Cliente")) {
             if (resposta == 0) {
                 try {
                     clienteControl.removerCliente(cliente);
-                    JOptionPane.showMessageDialog(null,MensagemUtilCliente.getValor(MensagemUtilCliente.MSG_SUCESSO_REMOVERCLI),MensagemUtilUsuario.getValor(MensagemUtilUsuario.CABE_REM), JOptionPane.OK_OPTION);
+                    JOptionPane.showMessageDialog(null, MensagemUtilCliente.getValor(MensagemUtilCliente.MSG_SUCESSO_REMOVERCLI), MensagemUtilUsuario.getValor(MensagemUtilUsuario.CABE_REM), JOptionPane.OK_OPTION);
                     DefaultTableModel modeloTableDados = (DefaultTableModel) tbdados.getModel();
                     while (modeloTableDados.getRowCount() > 0) {
                         modeloTableDados.removeRow(0);
@@ -231,7 +225,7 @@ public class Remover extends javax.swing.JDialog {
             if (resposta == 0) {
                 try {
                     admControl.removerAdm(adm);
-                    JOptionPane.showMessageDialog(null,MensagemUtilAdm.getValor(MensagemUtilAdm.MSG_SUCESSO_REMOVERADM),MensagemUtilUsuario.getValor(MensagemUtilUsuario.CABE_REM), JOptionPane.OK_OPTION);
+                    JOptionPane.showMessageDialog(null, MensagemUtilAdm.getValor(MensagemUtilAdm.MSG_SUCESSO_REMOVERADM), MensagemUtilUsuario.getValor(MensagemUtilUsuario.CABE_REM), JOptionPane.OK_OPTION);
                     DefaultTableModel modeloTableDados = (DefaultTableModel) tbdados.getModel();
                     while (modeloTableDados.getRowCount() > 0) {
                         modeloTableDados.removeRow(0);
@@ -244,7 +238,7 @@ public class Remover extends javax.swing.JDialog {
             if (resposta == 0) {
                 try {
                     imovelControl.removerImovel(imovel);
-                    JOptionPane.showMessageDialog(null,MensagemUtilImovel.getValor(MensagemUtilImovel.MSG_SUCESSO_REMOVERIMO),MensagemUtilUsuario.getValor(MensagemUtilUsuario.CABE_REM), JOptionPane.OK_OPTION);
+                    JOptionPane.showMessageDialog(null, MensagemUtilImovel.getValor(MensagemUtilImovel.MSG_SUCESSO_REMOVERIMO), MensagemUtilUsuario.getValor(MensagemUtilUsuario.CABE_REM), JOptionPane.OK_OPTION);
                     DefaultTableModel modeloTableDados = (DefaultTableModel) tbdados.getModel();
                     while (modeloTableDados.getRowCount() > 0) {
                         modeloTableDados.removeRow(0);
@@ -258,7 +252,7 @@ public class Remover extends javax.swing.JDialog {
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        int resp = JOptionPane.showConfirmDialog(null,MensagemUtilUsuario.getValor(MensagemUtilUsuario.MSG_CANCEL),MensagemUtilUsuario.getValor(MensagemUtilUsuario.CABE_CANCEL), JOptionPane.YES_NO_OPTION);
+        int resp = JOptionPane.showConfirmDialog(null, MensagemUtilUsuario.getValor(MensagemUtilUsuario.MSG_CANCEL), MensagemUtilUsuario.getValor(MensagemUtilUsuario.CABE_CANCEL), JOptionPane.YES_NO_OPTION);
         if (resp == 0) {
             DefaultTableModel modeloTableDados = (DefaultTableModel) tbdados.getModel();
             while (modeloTableDados.getRowCount() > 0) {
@@ -297,6 +291,7 @@ public class Remover extends javax.swing.JDialog {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Remover.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the dialog */
